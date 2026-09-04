@@ -8,9 +8,13 @@ My edge is a combination that's uncommon in the field: **software engineering + 
 
 ---
 
-### Flagship
+### The GEO cluster
 
-**[The GEO Handbook](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook)** — an open, community-maintained reference on being cited by AI answer engines. Every claim is sourced. Licensed CC BY-SA.
+Three layers on one subject — the handbook is the flagship:
+
+- **[The GEO Handbook](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook)** — the open, community-maintained reference on being cited by AI answer engines: the theory. Every claim is sourced. Licensed CC BY-SA.
+- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — the practice: reproducible, measured examples, each with a `before/`, an `after/` and one script per recipe.
+- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — the ledger that grades techniques `solid`, `mixed` or `folklore`, with a primary source behind every entry.
 
 ### Open-source tools
 
