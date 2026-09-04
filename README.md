@@ -19,7 +19,7 @@ Three layers on one subject — the handbook is the flagship:
 ### Open-source tools
 
 - **[notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system)** — token-efficient knowledge system for AI agents
-- **[structllm](https://github.com/ferinazumaDEV/structllm)** — reliable, schema-validated structured output from any LLM
+- **[structllm](https://github.com/ferinazumaDEV/structllm)** — reliable, schema-validated structured output, with providers for Anthropic and OpenAI
 - **[politeclient](https://github.com/ferinazumaDEV/politeclient)** — a well-behaved, resilient HTTP client for Python
 - **[scaffld](https://github.com/ferinazumaDEV/scaffld)** — scaffolding for fully-wired Python projects
 - **[webhook-replay](https://github.com/ferinazumaDEV/webhook-replay)** — capture a webhook once, replay it locally
@@ -31,4 +31,4 @@ Three layers on one subject — the handbook is the flagship:
 
 ### Contact
 
-Open to GEO and technical-SEO engagements — **bussiness@zentimes.es**
+Open to GEO and technical-SEO engagements — **business@zentimes.es**
