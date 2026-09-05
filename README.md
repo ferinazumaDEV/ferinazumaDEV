@@ -12,9 +12,9 @@ My edge is a combination that's uncommon in the field: **software engineering + 
 
 Three repositories, one thread — content that AI engines can verify and cite; the handbook is the flagship:
 
-- **[The GEO Handbook](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook)** — the open, community-maintained reference on being cited by AI answer engines: the theory. Every claim carries a real, linkable source or is explicitly marked `needs verification`. Licensed CC BY-SA 4.0.
-- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — the practice: reproducible, measured examples, each with a `before/`, an `after/` and one script per recipe.
-- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — the ledger that grades techniques `solid`, `mixed` or `folklore`, with the sources — or their absence — stated for every entry.
+- **[The GEO Handbook](https://github.com/ferinazumaDEV/generative-engine-optimization-handbook)** — the open, community-maintained reference on being cited by AI answer engines: the theory. Every claim carries a real, linkable source or is explicitly marked `needs verification`. Licensed CC BY-SA 4.0. Archived and citable: [DOI 10.5281/zenodo.22299644](https://doi.org/10.5281/zenodo.22299644).
+- **[The GEO Cookbook](https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook)** — the practice: reproducible, measured examples, each with a `before/`, an `after/` and one script per recipe. Archived and citable: [DOI 10.5281/zenodo.22299279](https://doi.org/10.5281/zenodo.22299279).
+- **[Evidence-Based Prompt Engineering](https://github.com/ferinazumaDEV/prompt-engineering-evidence)** — the ledger that grades techniques `solid`, `mixed` or `folklore`, with the sources — or their absence — stated for every entry. Archived and citable: [DOI 10.5281/zenodo.22307826](https://doi.org/10.5281/zenodo.22307826).
 
 ### Open-source tools
 
