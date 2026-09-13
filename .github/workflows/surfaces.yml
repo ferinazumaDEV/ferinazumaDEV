@@ -1,0 +1,29 @@
+name: surfaces
+
+# Once a week, the public surfaces of ferinazumaDEV are read as a stranger would read them —
+# the Contra profile and its five case studies, the GitHub profile, zentimes.es, the five PyPI
+# packages — and checked for one thing: that they say the same thing. Same handle, same links,
+# no promise that was retired. The 2026-09-12 external audit found this drifting (an old handle
+# on one surface, a retired claim on another); this is the guard that says so before an auditor
+# does. Read-only; nothing here writes to any surface.
+
+on:
+  schedule:
+    - cron: '23 7 * * 1'   # Mondays 07:23 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/check-surfaces.sh', '.github/workflows/surfaces.yml']
+  pull_request:
+    paths: ['scripts/check-surfaces.sh', '.github/workflows/surfaces.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  surfaces:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: The public surfaces agree with each other
+        run: bash scripts/check-surfaces.sh
