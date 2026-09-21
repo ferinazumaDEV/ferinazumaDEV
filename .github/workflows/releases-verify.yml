@@ -1,0 +1,41 @@
+name: releases-verify
+
+# Once a week, every published package is verified the way RELEASING.md tells a stranger to verify it:
+# bytes fetched from PyPI, compared against PyPI's own digests, against the SHA256SUMS of the matching
+# GitHub Release, against the build attestation, and against the PEP 740 provenance in the Integrity API.
+#
+# Why a schedule and not a one-off: the procedure was run by hand on 2026-09-21 and all five packages
+# passed, including the two whose GitHub Release was assembled by hand after a workflow failure. That
+# proved the chain held *that day*. A supply chain is not a fact, it is a state: an asset deleted from a
+# release, a yanked file, a re-uploaded artefact or an expired attestation all break it silently and
+# none of them touch this repository. This is what notices.
+#
+# The script fails when it cannot check something, on purpose — "could not verify" is not "verified".
+# Both directions were exercised before this landed: green on all five, and red on three deliberate
+# breakages (wrong owning repo, package absent from PyPI, release tag that does not exist).
+
+on:
+  schedule:
+    - cron: '41 7 * * 1'   # Mondays 07:41 UTC, after `surfaces`
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/verify-releases.sh', '.github/workflows/releases-verify.yml']
+  pull_request:
+    paths: ['scripts/verify-releases.sh', '.github/workflows/releases-verify.yml']
+
+permissions:
+  contents: read
+  # `gh attestation verify` reads the attestations attached to the packages' own repositories.
+  attestations: read
+  id-token: write
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Every published package still verifies end to end
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/verify-releases.sh
