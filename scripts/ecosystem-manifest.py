@@ -1,4 +1,4 @@
-"""Generate or check `ecosystem.json`: one machine-readable entry point to everything this ecosystem publishes.
+"""Generate or check `ecosystem-manifest.json`: one machine-readable entry point to everything this ecosystem publishes.
 
 Why it exists. This project's whole thesis is that machine-extractability is a precondition for being cited,
 and its own ecosystem was legible only by reading nine repositories one at a time. This is the manifest a
@@ -100,7 +100,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--check", action="store_true")
-    ap.add_argument("--path", default="ecosystem.json")
+    ap.add_argument("--path", default="ecosystem-manifest.json")
     a = ap.parse_args()
     live = build()
     path = pathlib.Path(a.path)
