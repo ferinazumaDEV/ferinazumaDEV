@@ -1,0 +1,89 @@
+{
+  "$comment": "One machine-readable entry point to what ferinazumaDEV publishes. Regenerate with scripts/ecosystem-manifest.py --write; the weekly workflow runs --check so it cannot rot silently.",
+  "generated": "2026-09-21T11:06:14Z",
+  "owner": "ferinazumaDEV",
+  "items": [
+    {
+      "repo": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook",
+      "kind": "work",
+      "license": "CC-BY-SA-4.0",
+      "latest_tag": "v0.1.3",
+      "concept_doi": "10.5281/zenodo.22299644",
+      "doi_state": "findable",
+      "swhid_dir": "swh:1:dir:897239cbf937d23f2bed949e763f0f1d70f5a45a"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/generative-engine-optimization-cookbook",
+      "kind": "work",
+      "license": "MIT AND CC-BY-4.0",
+      "latest_tag": "v0.1.3",
+      "concept_doi": "10.5281/zenodo.22299279",
+      "doi_state": "findable",
+      "swhid_dir": "swh:1:dir:b215074eaaaf3feb7d4fab10bf0f13c645f0fafa"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/prompt-engineering-evidence",
+      "kind": "work",
+      "license": "CC-BY-SA-4.0",
+      "latest_tag": "v0.1.2",
+      "concept_doi": "10.5281/zenodo.22307826",
+      "doi_state": "findable",
+      "swhid_dir": "swh:1:dir:6541e0e729b6e8fb0bd66cdf0dd93d9ac728e50c"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/typedout",
+      "kind": "package",
+      "pypi": "https://pypi.org/project/typedout-py/",
+      "install": "typedout-py",
+      "imports": "typedout",
+      "latest_tag": "v0.1.3",
+      "published_version": "0.1.3",
+      "pep740_attestations": 2,
+      "swhid_dir": "swh:1:dir:b48712513a43fec0f32ce4e9d8c2f567c6fa4bc9"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/politeclient",
+      "kind": "package",
+      "pypi": "https://pypi.org/project/politeclient/",
+      "install": "politeclient",
+      "imports": "politeclient",
+      "latest_tag": "v0.1.2",
+      "published_version": "0.1.2",
+      "pep740_attestations": 2,
+      "swhid_dir": "swh:1:dir:80cf731c5327beb320c0131487fafd89dedb7dc2"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/webhook-replay",
+      "kind": "package",
+      "pypi": "https://pypi.org/project/webhook-replay/",
+      "install": "webhook-replay",
+      "imports": "webhook_replay",
+      "latest_tag": "v0.1.3",
+      "published_version": "0.1.3",
+      "pep740_attestations": 2,
+      "swhid_dir": "swh:1:dir:7933c213eb0d573977fc45d1ca11af9553c1b53a"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/scaffld",
+      "kind": "package",
+      "pypi": "https://pypi.org/project/scaffld/",
+      "install": "scaffld",
+      "imports": "scaffld",
+      "latest_tag": "v0.1.2",
+      "published_version": "0.1.2",
+      "pep740_attestations": 2,
+      "swhid_dir": "swh:1:dir:20e8221d52a2fbd206a731c9bf14e83277a7ca1f"
+    },
+    {
+      "repo": "https://github.com/ferinazumaDEV/framesig",
+      "kind": "package",
+      "pypi": "https://pypi.org/project/framesig/",
+      "install": "framesig",
+      "imports": "framesig",
+      "latest_tag": "v0.1.2",
+      "published_version": "0.1.2",
+      "pep740_attestations": 2,
+      "swhid_dir": "swh:1:dir:fe685e1faf7289861e8f09aec7b390a2e1397d89"
+    }
+  ]
+}

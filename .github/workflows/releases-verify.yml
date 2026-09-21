@@ -20,9 +20,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/verify-releases.sh', '.github/workflows/releases-verify.yml']
+    paths: ['scripts/verify-releases.sh', 'scripts/ecosystem-manifest.py', 'ecosystem.json', '.github/workflows/releases-verify.yml']
   pull_request:
-    paths: ['scripts/verify-releases.sh', '.github/workflows/releases-verify.yml']
+    paths: ['scripts/verify-releases.sh', 'scripts/ecosystem-manifest.py', 'ecosystem.json', '.github/workflows/releases-verify.yml']
 
 permissions:
   contents: read
@@ -39,3 +39,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: bash scripts/verify-releases.sh
+      - name: ecosystem.json still describes what is actually published
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/ecosystem-manifest.py --check
