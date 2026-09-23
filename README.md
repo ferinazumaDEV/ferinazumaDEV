@@ -19,6 +19,7 @@ Three repositories, one thread — content that AI engines can verify and cite; 
 ### Open-source tools
 
 - **[notebooklm-kb-system](https://github.com/ferinazumaDEV/notebooklm-kb-system)** — token-efficient knowledge system for AI agents
+  - 2026-09-23: archived and citable — concept [DOI 10.5281/zenodo.22554843](https://doi.org/10.5281/zenodo.22554843); licensed AGPL-3.0-or-later ([Source: CITATION.cff at v0.1.2](https://raw.githubusercontent.com/ferinazumaDEV/notebooklm-kb-system/v0.1.2/CITATION.cff)); the Zenodo record of v0.1.2 carries the licence id `agpl-3.0-or-later` ([Source: Zenodo record 22923166](https://zenodo.org/api/records?q=conceptdoi:%2210.5281/zenodo.22554843%22&all_versions=true)). Listed in [`ecosystem-manifest.json`](ecosystem-manifest.json) as kind `tool`: a DOI-bearing tool with no PyPI package.
 - **[typedout](https://github.com/ferinazumaDEV/typedout)** — reliable, schema-validated structured output, with providers for Anthropic and OpenAI
 - **[politeclient](https://github.com/ferinazumaDEV/politeclient)** — a well-behaved, resilient HTTP client for Python
 - **[scaffld](https://github.com/ferinazumaDEV/scaffld)** — scaffolding for fully-wired Python projects

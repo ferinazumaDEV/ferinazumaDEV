@@ -25,6 +25,11 @@ WORKS = [
      "concept_doi": "10.5281/zenodo.22299279", "license": "MIT AND CC-BY-4.0"},
     {"repo": "prompt-engineering-evidence", "kind": "work",
      "concept_doi": "10.5281/zenodo.22307826", "license": "CC-BY-SA-4.0"},
+    # Added 2026-09-23. A DOI-bearing tool with no PyPI package, so it is neither "work" nor "package":
+    # kind "tool". Licence and concept DOI as declared in its CITATION.cff at the latest tag (v0.1.2);
+    # the Zenodo record for that tag carries licence id agpl-3.0-or-later.
+    {"repo": "notebooklm-kb-system", "kind": "tool",
+     "concept_doi": "10.5281/zenodo.22554843", "license": "AGPL-3.0-or-later"},
 ]
 PACKAGES = [
     {"repo": "typedout", "kind": "package", "pypi": "typedout-py", "imports": "typedout"},
@@ -50,14 +55,18 @@ def latest_tag(repo):
     t = gh_json(f"repos/{OWNER}/{repo}/tags?per_page=1")
     return t[0]["name"] if t else None
 
-def swhid_of(repo, tag):
-    """SWHID of the tagged tree, as written in the release notes; read from the release body, not invented."""
+def swhid_of(repo, tag, obj="dir"):
+    """SWHID of the tagged tree (obj="dir") or commit (obj="rev"), as written in the release notes; read from the
+    release body, not invented. Since 2026-09-22 the release notes carry the revision identifier (`swh:1:rev:`,
+    which is the git commit id itself) rather than the directory one, so `dir` is null for those tags and
+    `rev` is the field that carries the archive pointer. Neither is ever assembled here."""
+    prefix = f"swh:1:{obj}:"
     r = gh_json(f"repos/{OWNER}/{repo}/releases/tags/{tag}")
     if not r: return None
     for line in (r.get("body") or "").splitlines():
-        if "swh:1:dir:" in line:
-            frag = line.split("swh:1:dir:")[1]
-            return "swh:1:dir:" + frag.split("`")[0].split(">")[0].split(";")[0].strip()
+        if prefix in line:
+            frag = line.split(prefix)[1]
+            return prefix + frag.split("`")[0].split(">")[0].split(";")[0].split(" ")[0].strip()
     return None
 
 def build():
@@ -76,6 +85,7 @@ def build():
             "latest_tag": tag, "concept_doi": w["concept_doi"],
             "doi_state": (rec or {}).get("data", {}).get("attributes", {}).get("state"),
             "swhid_dir": swhid_of(w["repo"], tag) if tag else None,
+            "swhid_rev": swhid_of(w["repo"], tag, "rev") if tag else None,
         })
     for p in PACKAGES:
         tag = latest_tag(p["repo"])
@@ -93,6 +103,7 @@ def build():
             "pypi": f"https://pypi.org/project/{p['pypi']}/", "install": p["pypi"], "imports": p["imports"],
             "latest_tag": tag, "published_version": ver, "pep740_attestations": att,
             "swhid_dir": swhid_of(p["repo"], tag) if tag else None,
+            "swhid_rev": swhid_of(p["repo"], tag, "rev") if tag else None,
         })
     return out
 
