@@ -2,6 +2,8 @@
 
 **Software & security engineer** · `ferinazumaDEV` · Madrid
 
+**Independent GEO developer in Spain** — not an agency — *desarrollador independiente de GEO en España*: I publish my GEO work as open source (this cluster) with reproducible measurements.
+
 I specialise in **GEO — Generative Engine Optimization**: making content and brands legible to AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) so they get **cited** — and measuring the impact.
 
 My edge is a combination that's uncommon in the field: **software engineering + technical SEO + security**. I diagnose *why* an AI engine overlooks a site and then implement the code, structured data and architecture that fix it — end to end, no agency hand-off. White-hat only.
